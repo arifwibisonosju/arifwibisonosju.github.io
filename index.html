@@ -1,155 +1,114 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>al-folio — Profile</title>
-  <meta name="description" content="Personal academic profile" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #0b0f14; --card: #0f1620; --text: #e6edf3; --sub: #9fb1c5;
-      --accent: #4da3ff; --muted: #1a2430; --ring: rgba(77,163,255,.2); --maxw: 980px;
-    }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; }
-    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: radial-gradient(1200px 800px at 80% -10%, #143, transparent), var(--bg); color: var(--text); line-height: 1.6; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
-    header { display: flex; align-items: center; gap: 20px; padding: 28px 0 8px; }
-    .avatar { width: 96px; height: 96px; border-radius: 18px; background: var(--muted); overflow: hidden; border: 1px solid var(--ring); flex: 0 0 auto; }
-    .avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .titlegroup h1 { margin: 0; font-size: 28px; letter-spacing: .2px; }
-    .titlegroup p { margin: 6px 0 0; color: var(--sub); }
-    nav { margin: 16px 0 24px; display: flex; flex-wrap: wrap; gap: 10px; }
-    nav a { padding: 8px 12px; background: var(--muted); border: 1px solid var(--ring); border-radius: 999px; font-size: 14px; }
-    section { background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)); border: 1px solid var(--ring); border-radius: 16px; padding: 20px; margin: 18px 0; }
-    section h2 { margin: 0 0 10px; font-size: 20px; }
-    .card { background: var(--card); border: 1px solid var(--ring); border-radius: 14px; padding: 14px 16px; }
-    .grid { display: grid; gap: 12px; }
-    @media (min-width: 760px) { .grid.cols-2 { grid-template-columns: 1fr 1fr; } }
-    ul { margin: 10px 0 0; padding: 0 0 0 18px; }
-    li { margin: 6px 0; }
-    footer { color: var(--sub); font-size: 14px; padding: 26px 0 40px; }
-    .badges { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
-    .badge { background: var(--muted); border: 1px solid var(--ring); padding: 4px 10px; border-radius: 999px; font-size: 12px; color: var(--sub); }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arif Wibisono - Resume</title>
+  <link rel="stylesheet" href="stylesheet.css"/>
+  <!-- Font Awesome untuk ikon sosmed -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="avatar">
-        <img src="achadansori.github.io-main/readme_preview/photos-screenshot.png" alt="Profile portrait" />
-      </div>
-      <div class="titlegroup">
-        <h1>al-folio</h1>
-        <p>Intelligent Mechatronics • AUV • IoUT • MARL</p>
-        <div class="badges">
-          <a class="badge" href="#publications">Publications</a>
-          <a class="badge" href="#projects">Projects</a>
-          <a class="badge" href="#teaching">Teaching</a>
-          <a class="badge" href="#service">Service</a>
-          <a class="badge" href="#contact">Contact</a>
-        </div>
-      </div>
+  <div class="container">
+    <!-- Bagian Profil -->
+    <header class="profile">
+      <img src="img/profile.jpg" alt="Profile Photo" class="profile-img"/>
+      <h1>Arif Wibisono</h1>
+      <p class="subtitle">Graduate Student Member, IEEE</p>
+      <!-- Tagline sekarang jadi link ke section -->
+      <p class="tagline">
+        <a href="#about">Researcher</a> | 
+        <a href="#lecturer">Lecturer</a> | 
+        <a href="#entrepreneur">Tech Entrepreneur</a>
+      </p>
     </header>
 
-    <nav>
-      <a href="#about">About</a>
-      <a href="#publications">Publications</a>
-      <a href="#projects">Projects</a>
-      <a href="#talks">Talks</a>
-      <a href="#awards">Awards</a>
-      <a href="#contact">Contact</a>
-      <a href="cv.pdf" target="_blank" rel="noopener">CV (PDF)</a>
-      <a href="https://github.com/arifwibisonosju" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://scholar.google.com/" target="_blank" rel="noopener">Scholar</a>
-      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-    </nav>
-
-    <section id="about" class="card">
-      <h2>About</h2>
-      <p>Researcher focusing on Autonomous Underwater Vehicles (AUV), energy‑aware Multi‑Agent Reinforcement Learning (MARL), and Underwater Wireless Sensor Networks (UWSN). I work on coordinated data collection, communication‑efficient control, and robust navigation in dynamic ocean environments.</p>
+    <!-- Bagian About -->
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <p>
+        I am currently pursuing my Ph.D. at Sejong University, Seoul, Republic of Korea, majoring in Intelligent 
+        Mechatronics Engineering and Convergence Engineering for Intelligent Drone.
+      </p>
+      <p>
+        My passion lies in autonomous systems and intelligent robotics, with research spanning multi-agent 
+        reinforcement learning, underwater robotics, and intelligent drone technologies.
+      </p>
     </section>
 
-    <section id="highlights">
-      <h2>Highlights</h2>
-      <div class="grid cols-2">
-        <div class="card">
-          <strong>IEEE Access 2024</strong>
-          <p>Energy‑Aware MARL for Coordinated Data Collection in Multi‑AUV Systems.</p>
-          <a href="#" target="_blank" rel="noopener">paper</a>
-        </div>
-        <div class="card">
-          <strong>Sensors 2023</strong>
-          <p>UUV Survey: Challenges, Enabling Technologies, and Future Directions.</p>
-          <a href="#" target="_blank" rel="noopener">paper</a>
-        </div>
+    <!-- Bagian Lecturer -->
+    <section id="lecturer" class="lecturer">
+      <h2>Lecturer</h2>
+      <p>
+        I previously served as a lecturer at Universitas PGRI Semarang, Indonesia, where I taught courses in computer 
+        programming, graphic design, and information technology. In addition to teaching, I mentored students in 
+        robotics, and collaborative projects. Currently, I am on study leave to pursue my Ph.D.
+      </p>
+    </section>
+
+    <!-- Latest Publications Section -->
+    <section id="publications" class="publications">
+      <h2>Latest Publications</h2>
+      <ul>
+        <li>
+          <strong>A Survey on Unmanned Underwater Vehicles: Challenges, Enabling Technologies, and Future Research Directions</strong>, MDPI Sensors, 2023.  
+          <a href="https://doi.org/10.3390/s23177321" target="_blank">https://doi.org/10.3390/s23177321</a>
+        </li>
+        <li>
+          <strong>An Autonomous Underwater Vehicle Navigation Technique for Inspection and Data Acquisition in UWSNs</strong>, IEEE Access, 2024.  
+          <a href="https://doi.org/10.1109/ACCESS.2024.3353382" target="_blank">doi: 10.1109/ACCESS.2024.3353382</a>
+        </li>
+        <li>
+          <strong>A Survey on Underwater Wireless Power and Data Transfer System</strong>, IEEE Access, 2024.  
+          <a href="https://doi.org/10.1109/ACCESS.2024.3373791" target="_blank">doi: 10.1109/ACCESS.2024.3373791</a>
+        </li>
+        <li>
+          <strong>Low-Cost Visual-Based Communication for Diver-Assist AUVs</strong>, IEEE Sensors, 2025.  
+          <a href="https://doi.org/10.1109/JSEN.2025.3540073" target="_blank">doi: 10.1109/JSEN.2025.3540073</a>
+        </li>
+        <li>
+          <strong>Energy-Aware MARL for Coordinated Data Collection in Multi-AUV Systems</strong>, IEEE Access, 2025.  
+          <a href="https://doi.org/10.1109/ACCESS.2025.3606016" target="_blank">doi: 10.1109/ACCESS.2025.3606016</a>
+        </li>
+        <li>
+          <strong>A Survey of Multi-Agent Reinforcement Learning for Cooperative Control in Multi-AUV Systems</strong>, IEEE Access, 2025.  
+          <a href="https://doi.org/10.1109/ACCESS.2025.3609457" target="_blank">doi: 10.1109/ACCESS.2025.3609457</a>
+        </li>
+      </ul>
+      <p>
+        For a complete list of my publications, please visit my 
+        <a href="https://scholar.google.com/citations?user=zxcETywAAAAJ&hl=id&authuser=2" target="_blank">Google Scholar profile</a>.
+      </p>
+    </section>
+
+    <!-- Bagian Social -->
+    <section class="social">
+      <h2>Connect with Me</h2>
+      <div class="linkSosmed">
+        <a class="itemSosmed" href="https://www.linkedin.com/in/arif-wibisono-ph-d-candidate-3353231b4" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a class="itemSosmed" href="https://www.instagram.com/arifwibisono21/" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a class="itemSosmed" href="https://www.tiktok.com/@arifwibisono21" target="_blank">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a class="itemSosmed" href="https://www.youtube.com/@arifwibisonoupgris9825" target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a class="itemSosmed" href="https://scholar.google.com/citations?user=zxcETywAAAAJ&hl=id&authuser=2" target="_blank">
+          <i class="fab fa-google"></i>
+        </a>
+        <a class="itemSosmed" href="https://github.com/arifwibisonosju" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
       </div>
     </section>
-
-    <section id="publications" class="card">
-      <h2>Selected Publications</h2>
-      <ul>
-        <li><strong>Title</strong> — Authors. <em>Venue, Year</em>. <a href="#" target="_blank" rel="noopener">PDF</a> · <a href="#" target="_blank" rel="noopener">Code</a></li>
-        <li><strong>Title</strong> — Authors. <em>Venue, Year</em>. <a href="#" target="_blank" rel="noopener">PDF</a></li>
-        <li><strong>Title</strong> — Authors. <em>Venue, Year</em>. <a href="#" target="_blank" rel="noopener">PDF</a> · <a href="#" target="_blank" rel="noopener">BibTeX</a></li>
-      </ul>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="grid cols-2">
-        <div class="card">
-          <h3 style="margin:6px 0 6px">Multi‑AUV MARL Simulator</h3>
-          <p>Grid‑based simulator with MADDPG/MAPPO/MODDPG baselines for coordinated data collection and energy‑aware routing.</p>
-          <a href="https://github.com/arifwibisonosju" target="_blank" rel="noopener">GitHub</a>
-        </div>
-        <div class="card">
-          <h3 style="margin:6px 0 6px">Underwater WPDT</h3>
-          <p>Prototype models for MI + acoustic/optical hybrid data & power transfer in UWSN.</p>
-          <a href="#" target="_blank" rel="noopener">docs</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="talks" class="card">
-      <h2>Talks</h2>
-      <ul>
-        <li>Invited talk — Smart Ocean with Multi‑AUV Coordination (2025)</li>
-        <li>Guest lecture — Energy‑Aware MARL (2024)</li>
-      </ul>
-    </section>
-
-    <section id="awards" class="card">
-      <h2>Awards</h2>
-      <ul>
-        <li>Best Paper Nominee — 2024</li>
-        <li>Graduate Scholarship — 2023–2025</li>
-      </ul>
-    </section>
-
-    <section id="teaching" class="card">
-      <h2>Teaching & Service</h2>
-      <ul>
-        <li>TA — Intelligent Mechatronics (2024)</li>
-        <li>Reviewer — IEEE Access, Sensors</li>
-      </ul>
-    </section>
-
-    <section id="contact" class="card">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:you@sejong.ac.kr">you@sejong.ac.kr</a> · Twitter: <a href="#" target="_blank" rel="noopener">@handle</a></p>
-      <p>Office: Sejong University, Seoul, South Korea</p>
-    </section>
-
-    <footer>
-      © <span id="y"></span> al-folio. Built with HTML/CSS. Hosted on GitHub Pages.
-    </footer>
+  
   </div>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
